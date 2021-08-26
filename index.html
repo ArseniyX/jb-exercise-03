@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="stylesheet" href="/style.css">
+    <script src="script.js"></script>
+
+    <title>Exercise 03</title>
+</head>
+
+<body>
+
+    <label for="firstName">First Name:</label>
+    <input id="firstName" />
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" />
+    <hr>
+    <!-- Address -->
+    <label>Address:</label>
+    <label for="city">City:</label>
+    <select id="city">
+        <option value="New York" selected>New York City</option>
+        <option value="Los Angeles">Los Angeles, California</option>
+        <option value="Chicago">Chicago, Illinois</option>
+        <option value="San Francisco">San Francisco, California</option>
+        <option value="Boston">Boston, Massachusetts</option>
+    </select>
+    <label for="street">Street:</label>
+    <input type="text" id="street" />
+    <label for="zipCode">Zip Code:</label>
+    <input id="zipCode" />
+    <hr>
+    <!-- Items -->
+    <label>Item:</label>
+    <label for="itemProperty">Item property:</label>
+    <select id="itemProperty">
+        <option value="banana" selected>Banana</option>
+        <option value="kiwi">Kiwi</option>
+        <option value="pineapple">Pineapple</option>
+    </select>
+    <label for="count">Count:</label>
+    <input type="number" id="count" />
+    <label for="priceForPiece">Price for Piece:</label>
+    <input type="number" id="priceForPiece" readonly/>₪
+    <label for="totalPrice">Total Price:</label>
+    <input type="number" id="totalPrice" readonly />₪
+    <hr>
+    <button onclick="buyIt()">Buy it</button>
+
+</body>
+
+</html>
