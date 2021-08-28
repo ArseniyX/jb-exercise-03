@@ -1,3 +1,13 @@
+window.onload = () => {
+  selectItem(setValue("itemProperty"));
+
+  document.getElementById("count").oninput = () => {
+    setValue("totalPrice").value = Math.round(
+      count.value * getValue("priceForPiece")
+    );
+  };
+};
+
 const buyIt = () => {
   const fullName = {
     firstName: getValue("firstName"),
@@ -13,22 +23,37 @@ const buyIt = () => {
     itemProperty: getValue("itemProperty"),
     count: getValue("count"),
     priceForPiece: getValue("priceForPiece"),
-    totalPrice: getValue("priceForPiece"),
+    totalPrice: getValue("totalPrice"),
   };
   const obj = {
-      fullName,
-      address,
-      item
-  }
+    fullName,
+    address,
+    item,
+  };
   console.log(obj);
 };
 
 const getValue = (id) => document.getElementById(id).value;
 
-// const selectItem = (item) => {
-//     switch (item) {
-//         case: 
+const setValue = (id) => document.getElementById(id);
 
-//         break
-//     }
-// }
+const selectItem = (item) => {
+  const fruit = document.getElementById("priceForPiece");
+  switch (item.value) {
+    case "banana":
+      fruit.value = 9.9;
+      break;
+    case "kiwi":
+      fruit.value = 22.9;
+      break;
+    case "pineapple":
+      fruit.value = 49.9;
+      break;
+    default:
+      fruit.value = "error";
+  }
+};
+
+
+
+
