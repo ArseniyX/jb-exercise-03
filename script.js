@@ -2,9 +2,7 @@ window.onload = () => {
   selectItem(setValue("itemProperty"));
 
   document.getElementById("count").oninput = () => {
-    setValue("totalPrice").value = Math.round(
-      count.value * getValue("priceForPiece")
-    );
+    calculate()
   };
 };
 
@@ -39,6 +37,7 @@ const setValue = (id) => document.getElementById(id);
 
 const selectItem = (item) => {
   const fruit = document.getElementById("priceForPiece");
+  
   switch (item.value) {
     case "banana":
       fruit.value = 9.9;
@@ -52,7 +51,14 @@ const selectItem = (item) => {
     default:
       fruit.value = "error";
   }
+  calculate()
 };
+
+const calculate = () => {
+  setValue("totalPrice").value = Math.round(
+    count.value * getValue("priceForPiece")
+  );
+}
 
 
 
