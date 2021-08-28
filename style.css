@@ -65,7 +65,7 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.form-control:focus {
+.form-control:focus, .custom-select:focus, .input-group-text:focus {
     background-color: rgb(24, 26, 27);
     border-color: 0;
     color: rgb(209, 205, 199);
@@ -74,4 +74,3 @@ input[type=number] {
     -o-transition: border-color 0.5s ease-out;
     transition: border-color 0.5s ease-out;
 }
-

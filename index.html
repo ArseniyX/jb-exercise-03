@@ -9,7 +9,6 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -23,7 +22,7 @@
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="firstName">First and last name</span>
+                <label class="input-group-text" for="firstName">First and Last name:</span>
             </div>
             <input class="form-control" type="text" id="firstName" />
             <input class="form-control" type="text" id="lastName" />
@@ -63,10 +62,10 @@
         </div>
         <hr>
         <!-- Items -->
-        <h3>Item:</h3>
+        <h3>Fruit:</h3>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="itemProperty">Item property:</label>
+                <label class="input-group-text" for="itemProperty">Select Fruit:</label>
             </div>
             <select class="custom-select" id="itemProperty" onchange="selectItem(this)">
                 <option value="banana" selected>Banana</option>
@@ -79,12 +78,11 @@
             <div class="input-group-prepend">
                 <label class="input-group-text" for="count">Count:</label>
             </div>
-            <input class="form-control" type="number" id="count" value="1"
-                aria-label="Amount (to the nearest dollar)" />
+            <input min="1" class="form-control" type="number" id="count" value="1"/>
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="priceForPiece">Price for Piece</label>
+                <label class="input-group-text" for="priceForPiece">Price:</label>
             </div>
             <input class="input-group-text" type="number" id="priceForPiece" readonly />
             <span class="input-group-text">₪</span>
@@ -96,7 +94,6 @@
             <input class="input-group-text" type="number" id="totalPrice" readonly />
             <span class="input-group-text">₪</span>
         </div>
-
 
         <div class="mx-auto m-3" style="width: 200px;">
             <button type="submit" class="btn btn-outline-success btn-lg" onclick="buyIt()">Buy it</button>

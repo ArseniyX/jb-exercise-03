@@ -40,13 +40,13 @@ const selectItem = (item) => {
   
   switch (item.value) {
     case "banana":
-      fruit.value = 9.9;
+      fruit.value = "9.90";
       break;
     case "kiwi":
-      fruit.value = 22.9;
+      fruit.value = "22.90";
       break;
     case "pineapple":
-      fruit.value = 49.9;
+      fruit.value = "49.90";
       break;
     default:
       fruit.value = "error";
@@ -55,9 +55,9 @@ const selectItem = (item) => {
 };
 
 const calculate = () => {
-  setValue("totalPrice").value = Math.round(
+  setValue("totalPrice").value = (
     count.value * getValue("priceForPiece")
-  );
+  ).toFixed(2);
 }
 
 
