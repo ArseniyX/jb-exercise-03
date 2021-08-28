@@ -1,5 +1,46 @@
+* {
+    scrollbar-color: #454a4d #202324;
+}
+
 body {
     text-align: center;
-    background-color: black;
     padding: 0 15%;
+    background-color: rgb(24, 26, 27);
+    color: rgb(209, 205, 199);
+}
+
+.form-control {
+    color: rgb(181, 175, 166);
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(60, 65, 68);
+}
+
+.input-group-text {
+    color: rgb(181, 175, 166);
+    background-color: rgb(35, 38, 39);
+    border-color: rgb(60, 65, 68);
+    margin: 0 1px;
+}
+
+.custom-select {
+    color: rgb(181, 175, 166);
+    background-color: rgb(24, 26, 27);
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    border-color: rgb(60, 65, 68);
+}
+
+.btn-outline-success {
+    color: rgb(97, 217, 124);
+    background-color: transparent;
+    background-image: none;
+    border-color: rgb(37, 156, 64);
+}
+
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
 }
