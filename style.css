@@ -1,5 +1,6 @@
 * {
     scrollbar-color: #454a4d #202324;
+    --border-input-color: #ced4da;
 }
 
 body {
@@ -12,13 +13,13 @@ body {
 .form-control {
     color: rgb(181, 175, 166);
     background-color: rgb(24, 26, 27);
-    border-color: rgb(119, 110, 98);
+    border-color: --border-input-color;
 }
 
 .input-group-text {
     color: rgb(181, 175, 166);
     background-color: rgb(35, 38, 39);
-    border-color: rgb(119, 110, 98);
+    border-color: --border-input-color;
     margin: 0 2px;
 }
 
@@ -37,11 +38,7 @@ body {
     text-align: center;
     white-space: nowrap;
     background-color: rgb(24, 26, 27);
-    border: 1px solid #ced4da;
-    border-top-color: rgb(206, 212, 218);
-    border-right-color: rgb(206, 212, 218);
-    border-bottom-color: rgb(206, 212, 218);
-    border-left-color: rgb(206, 212, 218);
+    border: 1px solid --border-input-color;
     border-radius: .25rem;
 }
 
@@ -49,7 +46,7 @@ body {
     color: rgb(181, 175, 166);
     background-color: rgb(24, 26, 27);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
-    border-color: rgb(119, 110, 98);
+    border-color: --border-input-color;
 }
 
 .btn-outline-success {
@@ -68,14 +65,13 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-::selection {
-    background-color: #004daa !important;
-    color: #e8e6e3 !important;
+.form-control:focus {
+    background-color: rgb(24, 26, 27);
+    border-color: 0;
+    color: rgb(209, 205, 199);
+    -webkit-transition: border-color 0.5s ease-out;
+    -moz-transition: border-color 0.5s ease-out;
+    -o-transition: border-color 0.5s ease-out;
+    transition: border-color 0.5s ease-out;
 }
 
-.form-control:focus {
-    -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out;
-    transition: background-color 2s ease-out;
-}
