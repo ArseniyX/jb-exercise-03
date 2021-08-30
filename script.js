@@ -1,27 +1,27 @@
 window.onload = () => {
-  selectItem(setValue("itemProperty"));
+  selectItem(itemProperty);
 
-  document.getElementById("count").oninput = () => {
-    calculate()
+  count.oninput = () => {
+    calculate();
   };
 };
 
 const buyIt = () => {
   const fullName = {
-    firstName: getValue("firstName"),
-    lastName: getValue("lastName"),
+    firstName: firstName.value,
+    lastName: lastName.value,
   };
   const address = {
-    city: getValue("city"),
-    street: getValue("street"),
-    zipCode: getValue("zipCode"),
+    city: city.value,
+    street: street.value,
+    zipCode: zipCode.value,
   };
 
   const item = {
-    itemProperty: getValue("itemProperty"),
-    count: getValue("count"),
-    priceForPiece: getValue("priceForPiece"),
-    totalPrice: getValue("totalPrice"),
+    itemProperty: itemProperty.value,
+    count: count.value,
+    priceForPiece: priceForPiece.value,
+    totalPrice: totalPrice.value,
   };
   const obj = {
     fullName,
@@ -31,35 +31,23 @@ const buyIt = () => {
   console.log(obj);
 };
 
-const getValue = (id) => document.getElementById(id).value;
-
-const setValue = (id) => document.getElementById(id);
-
 const selectItem = (item) => {
-  const fruit = document.getElementById("priceForPiece");
-  
   switch (item.value) {
     case "banana":
-      fruit.value = "9.90";
+      priceForPiece.value = "9.90";
       break;
     case "kiwi":
-      fruit.value = "22.90";
+      priceForPiece.value = "22.90";
       break;
     case "pineapple":
-      fruit.value = "49.90";
+      priceForPiece.value = "49.90";
       break;
     default:
-      fruit.value = "error";
+      priceForPiece.value = "error";
   }
-  calculate()
+  calculate();
 };
 
 const calculate = () => {
-  setValue("totalPrice").value = (
-    count.value * getValue("priceForPiece")
-  ).toFixed(2);
-}
-
-
-
-
+  totalPrice.value = (count.value * priceForPiece.value).toFixed(2);
+};
